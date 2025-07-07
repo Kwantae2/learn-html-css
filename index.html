@@ -4,18 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML실습</title>
+
+    <!--  외부 스타일시트 -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- 내부 스타일시트 : head 섹션 안에 각 요소들의 style 정의 -->
+    <style>
+      a {
+        /* 스타일 속성 */
+        color: white;
+      }
+    </style>
   </head>
   <body>
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, eligendi
-        corrupti doloribus rem ipsa ullam, <br />quam officiis ab tempore atque
-        cum sed sint fugiat quibusdam vitae commodi in expedita odio?
-      </p>
-      <a href="https://www.naver.com/" target="_blank"> 네이버 바로가기 </a>
-    </div>
-    <div>
-      <a href="">구글 바로가기</a>
+    <!-- inline 스타일 : html 코드 내에서 해당 태그에 직접 style 속성을 주는 것 -->
+    <div style="background-color: blue; color: white" id="box1">
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
+          eligendi corrupti doloribus rem ipsa ullam, <br />quam officiis ab
+          tempore atque cum sed sint fugiat quibusdam vitae commodi in expedita
+          odio?
+        </p>
+        <a href="https://www.naver.com/" target="_blank"> 네이버 바로가기 </a>
+      </div>
+      <div>
+        <a href="">구글 바로가기</a>
+      </div>
     </div>
     <!--  START: 텍스트 태그 -->
     <div style="border: 1px solid red">
@@ -23,10 +38,13 @@
       <h3>반갑습니다.</h3>
       <p>
         Lorem ipsum <strong>sit</strong> amet consectetur adipisicing elit. Illo
-        repellendus <span style="color: red">excepturi</span> eius, porro labore
-        cum debitis perferendis. <br />Dolores iste cupiditate porro quod
-        consequuntur nihil voluptatum magni pariatur inventore. Saepe, maiores?
+        repellendus <span style="color: red" class="error">error</span> eius,
+        porro labore cum debitis perferendis. <br />Dolores iste cupiditate
+        porro quod consequuntur nihil voluptatum magni pariatur inventore.
+        Saepe, maiores?
       </p>
+      <span class="error">에러 메시지 입니다.</span>
+      <hr />
       <span>안녕?</span>
       <br />
       <span>지금은 오후 1시 34분 입니다.</span>
@@ -86,11 +104,11 @@
 
       <div>
         <p>체크박스 버튼</p>
-        <div style="border: red; display: block">
+        <div style="border: 2px solid red; display: inline-block">
           <label for="reading">독서</label>
           <input type="checkbox" name="hobby" value="reading" id="reading" />
         </div>
-        <div>
+        <div style="border: 2px solid red; display: inline-block">
           <label for="sports">운동</label>
           <input type="checkbox" name="hobby" value="sports" id="sports" />
         </div>

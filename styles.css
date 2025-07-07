@@ -1,0 +1,33 @@
+/* 1번 */
+form {
+  border: 2px dotted gray;
+}
+/* 2번 */
+form {
+  border: 2px solid red;
+}
+/* 스타일시트 : 우선순위는 인라인이 가장 높고, 그 다음 내부, 외부 (순서에 따라) */
+
+dl {
+  color: blueviolet;
+}
+
+/* 외부 스타일 시트가 가장 먼저 적용되도록 하려면? */
+/* div {
+  background-color: brown !important;
+} */
+
+/* 요소 선택자 == 태그 선택자 */
+/* div {
+  background-color: brown;
+} */
+
+/* id 선택자, 페이지에서 유일해야 함 */
+#box1 {
+  background-color: brown !important;
+}
+
+/* class 선택자 */
+.error {
+  background-color: rgba(255, 0, 0, 0.3);
+}
