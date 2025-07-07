@@ -1,3 +1,5 @@
+@import url("reset.css");
+
 /* 1번 */
 form {
   border: 2px dotted gray;
@@ -30,4 +32,39 @@ dl {
 /* class 선택자 */
 .error {
   background-color: rgba(255, 0, 0, 0.3);
+}
+
+.parent {
+  border: 1px solid purple;
+  padding: 10px;
+}
+
+.chidren {
+  border: 1px solid blue;
+  padding: 10px;
+}
+
+.childen_children {
+  border: 1px solid red;
+  background: beige;
+}
+
+.parent div {
+  background-color: aqua;
+}
+
+/* 일반 형제 선택자 */
+/* .parent ~ div {
+  border: 4px solid rgb(255, 0, 187);
+} */
+
+/* 인접 형제 선택자 */
+.parent + div {
+  border: 4px solid rgb(255, 0, 187);
+}
+
+/* 가상 선택자(hover */
+.submit-button:hover {
+  /* 요소에 마우스 올렸을때 스타일 */
+  background-color: hotpink;
 }
